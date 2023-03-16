@@ -12,8 +12,10 @@ while (continua)
     string nomeProduto = Console.ReadLine();
 
     Console.WriteLine("Agora digite o valor do produto para o mercado 1: ");
-    double precoProduto = int.Parse(Console.ReadLine());
+    double precoProduto = double.Parse(Console.ReadLine());
 
+     
+    
 
     Console.WriteLine("Pressione S para continuar cadastrando ou N para encerrar");
     string resposta = Console.ReadLine();
@@ -23,6 +25,6 @@ while (continua)
 
     if(resposta == "N")
     {
-        continua= false;
+        continua = false;
     }
 }
