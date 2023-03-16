@@ -1,9 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Mercadinho;
+﻿using Mercadinho;
 
-List<Produto> merca1 = new List<Produto>();
-List<Produto> merca2 = new List<Produto>();
-List<Produto> merca3 = new List<Produto>();
+List<Produto> merca1 = new();
+List<Produto> merca2 = new();
+List<Produto> merca3 = new();
 
 bool continua = true;
 
@@ -18,7 +17,8 @@ while (continua)
 
     Console.WriteLine("Pressione S para continuar cadastrando ou N para encerrar");
     string resposta = Console.ReadLine();
-
+    
+    
 
 
     if(resposta == "N")
