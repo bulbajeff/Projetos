@@ -1,0 +1,9 @@
+﻿Você está fazendo uma pesquisa de preço para sua compra do mês.
+
+Você vai sempre em 3 mercados diferentes para obter os preços.
+
+Sabendo disso, faça um algoritmo que armazene em uma lista a descrição de um produto, e os 3 preços encontrados nos mercados pesquisados. 
+
+Você pode inserir quantos produtos desejar.
+
+Ao fim das inclusões, o algoritmo deverá exibir o preço médio de cada produto, e o valor total da lista de cada mercado.
