@@ -7,3 +7,6 @@ Sabendo disso, faça um algoritmo que armazene em uma lista a descrição de um 
 Você pode inserir quantos produtos desejar.
 
 Ao fim das inclusões, o algoritmo deverá exibir o preço médio de cada produto, e o valor total da lista de cada mercado.
+
+
+
