@@ -3,14 +3,13 @@
 List<Produto> produtos = new List<Produto>();
 
 bool continua = true;
-double soma = 0;
 double somaMercado = 0;
 double media = 0;
 
 while (continua)
 {
     Produto produto = new Produto();
-    Console.WriteLine("===================================================");
+    
     Console.WriteLine("Digite o nome do produto a ser cadastrado: ");
     string nomeProduto = Console.ReadLine();
     produto.Nome = nomeProduto;
@@ -27,12 +26,11 @@ while (continua)
     Console.WriteLine("===================================================");
     Console.WriteLine("Pressione S para continuar cadastrando ou N para encerrar");
     string resposta = Console.ReadLine();
-    
-    
+        
     if(resposta == "N")
     {
         continua = false;
-    }
+    } 
 }
 
     foreach(var item in produtos)
@@ -44,7 +42,17 @@ while (continua)
         Console.WriteLine(item.Preco[2]);
     }
 
+    Console.WriteLine("===================================================");
+
     foreach (var item in produtos)
+    {
+        media = (item.Preco[0] + item.Preco[1] + item.Preco[2])/3;
+        Console.WriteLine("O preço médio do item " + item.Nome +  " é: " + media);
+    }
+
+    foreach(var item in produtos)
     {
         
     }
+
+
