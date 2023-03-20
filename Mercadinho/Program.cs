@@ -1,9 +1,10 @@
 ﻿using Mercadinho;
+using System.Net;
 
 List<Produto> produtos = new List<Produto>();
 
 bool continua = true;
-double somaMercado = 0;
+double total = 0;
 double media = 0;
 
 while (continua)
@@ -21,16 +22,16 @@ while (continua)
         double precoProduto = double.Parse(Console.ReadLine());
         produto.Preco[i] = precoProduto;      
     }
-    
+
     produtos.Add(produto);
     Console.WriteLine("===================================================");
     Console.WriteLine("Pressione S para continuar cadastrando ou N para encerrar");
     string resposta = Console.ReadLine();
-        
-    if(resposta == "N")
+
+    if (resposta == "N")
     {
         continua = false;
-    } 
+    }
 }
 
     foreach(var item in produtos)
@@ -47,12 +48,18 @@ while (continua)
     foreach (var item in produtos)
     {
         media = (item.Preco[0] + item.Preco[1] + item.Preco[2])/3;
-        Console.WriteLine("O preço médio do item " + item.Nome +  " é: " + media);
+        Console.WriteLine("O preço médio do item " + item.Nome +  " é: " + "R$" + Math.Round(media, 2));
     }
 
-    foreach(var item in produtos)
+    for (int i = 0; i <= 2; i++)
     {
-        
+        for (int j = 1; j <= produtos.Count; j++)
+        {
+            total = total + produtos[j - 1].Preco[i];
+        }
+        double totalMercado = total;
+
+        total = 0;
+
+        Console.WriteLine("O valor total do mercado " + (i + 1)  + " é: " + "R$" + Math.Round(totalMercado, 2));
     }
-
-
