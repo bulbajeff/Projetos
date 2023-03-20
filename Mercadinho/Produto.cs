@@ -11,10 +11,10 @@ namespace Mercadinho
         public string Nome { get; set; }
         public double[] Preco { get; set; }
 
-        public Produto() 
+        public Produto()
         {
             this.Nome = string.Empty;
-            this.Preco = new double[3];
+            this.Preco = new double[4];
         }
 
     }

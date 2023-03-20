@@ -9,4 +9,9 @@ Você pode inserir quantos produtos desejar.
 Ao fim das inclusões, o algoritmo deverá exibir o preço médio de cada produto, e o valor total da lista de cada mercado.
 
 
+---------------------------------------------------------
 
+a partir da sua próxima compra, você decidiu que vai incluir um novo mercado para fazer a cotação de preço
+
+
+e também achou por bem, saber o valor percentual de economia que você vai ter ao comparar o preço da sua compra final entre o mercado mais caro e o mais barato.
