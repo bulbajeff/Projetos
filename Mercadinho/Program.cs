@@ -97,6 +97,6 @@ while (continua)
 
     percentual = (100 * totalMercado[0]) / totalMercado[3];
 
-    Console.WriteLine("A economia percentual do mercado mais caro para o mais barato é de: " + Math.Round(percentual, 2) + "%");
+    Console.WriteLine("A economia percentual do mercado mais caro para o mais barato é de: " + Math.Round(100 - percentual, 2) + "%");
     
     
