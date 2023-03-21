@@ -71,27 +71,32 @@ while (continua)
         Console.WriteLine("O valor total do mercado " + (i + 1)  + " é: " + "R$" + Math.Round(totalMercado[i], 2));
     }
 
-    foreach(var item in totalMercado)
+    double controle = 0;
+
+    for (int i = 0; i < totalMercado.Length; i++)
     {
-        double maior = 0;
-        double menor = 0;
-
-        if (totalMercado[0] > totalMercado[1] )
+        for (int j = i + 1; j < totalMercado.Length; j++)
         {
-            maior= totalMercado[0];
-            menor = totalMercado[1];        
-        }
-        else
-            if (totalMercado[0] > totalMercado[2])
+            if (totalMercado[i] > totalMercado[j])
             {
-                if (totalMercado[0] > totalMercado[3])
-                {
-                    
-                }
+                controle = totalMercado[j];
+                totalMercado[j] = totalMercado[i];
+                totalMercado[i] = controle;
             }
-
-
-        
+        }
     }
 
-        
+    Console.WriteLine("Do mais barato para o mais caro: " +
+        "{" + totalMercado[0] + 
+        "; " + totalMercado[1] + 
+        "; " + totalMercado[2] + 
+        "; " + totalMercado[3] + 
+        "}");
+    
+    double percentual = 0;
+
+    percentual = (100 * totalMercado[0]) / totalMercado[3];
+
+    Console.WriteLine("A economia percentual do mercado mais caro para o mais barato é de: " + Math.Round(percentual, 2) + "%");
+    
+    

@@ -1,4 +1,4 @@
-﻿Você está fazendo uma pesquisa de preço para sua compra do mês.
+﻿DOUBLEVocê está fazendo uma pesquisa de preço para sua compra do mês.
 
 Você vai sempre em 3 mercados diferentes para obter os preços.
 
