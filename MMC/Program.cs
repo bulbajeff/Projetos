@@ -46,16 +46,3 @@ static bool verificaPrimo(int numero)
         return true;
     }
 }
-
-
-
-
-
-//Console.WriteLine("Agora digite o segundo número: ");
-//n2 = int.Parse(Console.ReadLine());
-
-//if (n1 < 1 || n2 < 1 || (n1 == n2))
-//{
-//    Console.WriteLine("Os números devem ser maiores do que zero e diferentes entre si. Tente novamente.");
-//    continua = false;
-//}
