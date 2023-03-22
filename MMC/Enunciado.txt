@@ -1,0 +1,6 @@
+﻿
+
+
+dado dois números inteiros X e Y, sendo que eles devem ser diferentes entre si e maior do que zero
+
+faça um algoritmo que informe o MMC entre esses dois números
