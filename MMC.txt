@@ -1,0 +1,86 @@
+int numeroPrimo = 0;
+int numero = 0;
+int numero1 = 0;
+int numero2 = 0;
+int controle = 1;
+bool continua = true;
+
+Console.WriteLine("Menu");
+Console.WriteLine("");
+
+Console.WriteLine("Digite 1 para Verificar se um número é primo");
+Console.WriteLine("Digite 2 para calcular o MMC de dois números");
+Console.WriteLine("===============================================");
+
+int opcao = int.Parse(Console.ReadLine());
+
+if (opcao == 1)
+{
+    while (continua)
+    {
+        Console.WriteLine("Digite o primeiro número: ");
+        numero = int.Parse(Console.ReadLine());
+
+        if (numero < 1 )
+        {
+            Console.WriteLine("Os números devem ser maiores do que zero e diferentes entre si");
+            continua = false;
+        }
+
+        if(verificaPrimo(numeroPrimo))
+        {
+            Console.WriteLine("É primo");
+        }
+        else
+        {
+            Console.WriteLine("Não é primo");
+        }
+        
+    }
+}
+
+if (opcao == 2)
+{
+    Console.WriteLine("Digite o primeiro número: ");
+    numero1 = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite o segundo número: ");
+    numero2 = int.Parse(Console.ReadLine());
+
+    if (numero1 < 1 || numero2 < 1 && numero1 != numero2)
+    {
+        Console.WriteLine("Os números devem ser maiores do que zero e diferentes entre si");
+        continua = false;
+    }
+
+    while (!(controle % numero1 == 0 && controle % numero2 == 0))
+    {
+        controle++;
+
+    }
+
+    Console.WriteLine("O MCC dos número " + numero1 + " " + "e " + numero2 + ": " + controle);
+
+}
+static bool verificaPrimo(int numero)
+{
+    int contador = 0;
+
+    for (int i = numero; i <= numero && i > 0; i--)
+    {
+        if (numero % i == 0)
+        {
+            contador++;                        
+        }
+    }
+
+    if (contador > 2)
+    {
+        return false;
+    }
+
+    else
+    {
+        return true;
+    }
+}
