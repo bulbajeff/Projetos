@@ -47,7 +47,7 @@ if (opcao == 1)
             continua = false;
         }
 
-        Console.WriteLine("Selecione uma nova opção para continuar");
+        Console.WriteLine("Selecione uma nova opção para continuar: 1 - Cadastrar | 2 - Pesquisar ");
         opcao = 0;
         opcao = int.Parse(Console.ReadLine());
 
@@ -85,14 +85,12 @@ if (opcao == 2 && produtos.Count > 0)
     nomeProduto = Console.ReadLine();
 
     var resultadoNome = produtos.Find(n => n.Nome.Contains(nomeProduto));
-    //var resultadoPreco = totalMercado.Find(totalMercado, p => p);
-    var resultadoPreco = Array.Find(totalMercado, totalMercado[0]);
-    Console.WriteLine(resultadoNome.Nome);
-    Console.WriteLine(resultadoPreco.Preco[0]);
+    var resultadoPreco = totalMercado[0];
+    Console.WriteLine("Produto encontrado: " + resultadoNome.Nome + " Valor: R$ " + resultadoPreco);
 }
+
 else
     Console.WriteLine("Opção incorreta ou nenhum produto adicionado.");
-
 
 
 foreach (var item in produtos)
@@ -113,8 +111,6 @@ foreach (var item in produtos)
     media = soma / produtos.Count();
     Console.WriteLine("O preço médio do item " + item.Nome + " é: " + "R$" + Math.Round(media, 2));
 }
-
-
 
 double controle = 0;
 
