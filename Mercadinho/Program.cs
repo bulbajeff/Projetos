@@ -65,6 +65,8 @@ if (opcao == 1)
 
 for (int i = 0; i <= 3; i++)
 {
+    total = 0;
+
     for (int j = 1; j <= produtos.Count; j++)
     {
         total = total + produtos[j - 1].Preco[i];
@@ -72,7 +74,6 @@ for (int i = 0; i <= 3; i++)
 
     totalMercado[i] = total;
 
-    total = 0;
 
     Console.WriteLine("O valor total do mercado " + (i + 1) + " é: " + "R$" + Math.Round(totalMercado[i], 2));
 }
@@ -80,13 +81,13 @@ for (int i = 0; i <= 3; i++)
 if (opcao == 2 && produtos.Count > 0)
 {
     string nomeProduto = String.Empty;
-    Console.WriteLine("=======================================");
+    Console.WriteLine("===================================================");
     Console.WriteLine("Digite o nome do produto que deseja pesquisar");
     nomeProduto = Console.ReadLine();
 
     var resultadoNome = produtos.Find(n => n.Nome.Contains(nomeProduto));
     var resultadoPreco = totalMercado[0];
-    Console.WriteLine("Produto encontrado: " + resultadoNome.Nome + " Valor: R$ " + resultadoPreco);
+    Console.WriteLine("Produto encontrado: " + resultadoNome.Nome + ". Menor Valor: R$ " + resultadoPreco);
 }
 
 else
@@ -103,12 +104,12 @@ foreach (var item in produtos)
     Console.WriteLine(item.Preco[3]);
 }
 
-Console.WriteLine("===================================================");
+Console.WriteLine("===============================================");
 
 foreach (var item in produtos)
 {
-    soma = soma + item.Preco[produtos.Count];
-    media = soma / produtos.Count();
+    soma = soma + item.Preco[item.Preco.Count()];
+    media = soma / item.Preco.Count();
     Console.WriteLine("O preço médio do item " + item.Nome + " é: " + "R$" + Math.Round(media, 2));
 }
 
@@ -136,6 +137,6 @@ Console.WriteLine("Do mais barato para o mais caro: " +
 
 double percentual = 0;
 
-percentual = (100 * totalMercado[0]) / totalMercado[3];
+percentual = (100 * totalMercado[0]) / totalMercado.Length;
 
 Console.WriteLine("A economia percentual do mercado mais caro para o mais barato é de: " + Math.Round(100 - percentual, 2) + "%");
