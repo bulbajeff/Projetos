@@ -10,7 +10,7 @@ namespace AtaDeAlunos
     public class Aluno
     {
         public string Nome { get; set; }
-        public int[] Notas { get; set; }
+        public double[] Notas { get; set; }
 
    }
 }

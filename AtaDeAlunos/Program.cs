@@ -4,43 +4,45 @@ using System.Runtime.Serialization;
 
 List<Aluno> Alunos = new List<Aluno>()
 {
-    new Aluno() { Nome = "aluno6", Notas = new int[] { 10, 9, 10 } },
-    new Aluno() { Nome = "aluno7", Notas = new int[] { 5, 6, 5 } },
+    new Aluno() { Nome = "aluno6", Notas = new double[] { 10, 9, 10 } },
+    new Aluno() { Nome = "aluno7", Notas = new double[] { 5, 6, 5 } },
     //new Aluno() { Nome = "aluno1", Notas = new int[] { 3, 4, 10, 4, 10, 10, 10, 1 } },
-    new Aluno() { Nome = "aluno3", Notas = new int[] { 4, 3, 3 } },
-    new Aluno() { Nome = "aluno5", Notas = new int[] { 3, 4, 10 } },
-    new Aluno() { Nome = "aluno4", Notas = new int[] { 3, 4, 10 } },
-    new Aluno() { Nome = "aluno2", Notas = new int[] { 3, 4, 10 } }
+    new Aluno() { Nome = "aluno3", Notas = new double[] { 4, 3, 3 } },
+    new Aluno() { Nome = "aluno5", Notas = new double[] { 3, 4, 10 } },
+    new Aluno() { Nome = "aluno4", Notas = new double[] { 3, 4, 10 } },
+    new Aluno() { Nome = "aluno2", Notas = new double[] { 3, 4, 10 } }
 };
 
-int media = 0;
-int soma = 0;
+List<double> mediaSala = new List<double>();
 
-List<double> Medias = new List<double>();
+double media = 0;
+double soma = 0;
 
-
-for(int i = 0; i <= Alunos.Count; i++)
+for(int i = 0; i < Alunos.Count; i++)
 {
-    for (int j = 0; j <= Alunos[i].Notas[j]; j++)
+    soma = 0;
+    media = 0;
+
+    for (int j = 0; j < 3; j++)
     {
-        media = (media + Alunos[i].Notas[j]) / 3;
+        soma = soma + Alunos[i].Notas[j];
     }
 
-    Medias.Add(media);
+    media = soma / 3;
+
+    mediaSala.Add(media);
+
+    Console.WriteLine(Alunos[i].Nome + ": " + Math.Round(media, 2));
 }
 
+double somaMedia = 0;
 
 
-//media = (Alunos[0].Notas[0] + Alunos[0].Notas[1] + Alunos[0].Notas[2]) / 3;
-//Console.WriteLine(media);
+foreach (double item in mediaSala)
+{
+    somaMedia = somaMedia + item;
+}
 
-
-
-
-Console.WriteLine(Alunos[0].Nome + " " +  media);
-Console.WriteLine(Alunos[1].Nome);
-Console.WriteLine(Alunos[2].Nome);
-Console.WriteLine(Alunos[3].Nome);
-Console.WriteLine(Alunos[4].Nome);
-Console.WriteLine(Alunos[5].Nome);
-Console.WriteLine(Alunos[6].Nome);
+somaMedia = somaMedia / 6;
+Console.WriteLine("Média da sala: " + Math.Round(somaMedia, 2));
+    
