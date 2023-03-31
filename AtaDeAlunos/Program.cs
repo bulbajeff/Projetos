@@ -42,4 +42,22 @@ foreach (double item in mediaSala)
 
 somaMedia = somaMedia / 6;
 Console.WriteLine("Média da sala: " + Math.Round(somaMedia, 2));
+
+for (int i = 0; i < mediaSala.Count; i++)
+{
+    if (mediaSala[i] > mediaSala[i+1])
+    {
+        int controle = 0;
+        double maior = 0;
+        double menor = 0;
+
+        maior = mediaSala[i];
+
+    }
+}
+
+foreach (double item in mediaSala)
+{
+    
+}
     
