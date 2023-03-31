@@ -1,6 +1,4 @@
 ﻿using AtaDeAlunos;
-using System.Globalization;
-using System.Runtime.Serialization;
 
 List<Aluno> Alunos = new List<Aluno>()
 {
@@ -36,7 +34,6 @@ for(int i = 0; i < Alunos.Count; i++)
 }
 
 double somaMedia = 0;
-
 
 foreach (double item in mediaSala)
 {
